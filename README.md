@@ -1,73 +1,109 @@
-# Projeto ToDoList CRUD Fullstack
+# ToDoList CRUD Fullstack Project
 
-Este é um projeto de ToDoList que implementa operações CRUD (Create, Read, Update, Delete) em uma lista de tarefas. Até o momento, o projeto consiste apenas no backend, que é uma API completa desenvolvida com Node.js, Express e MySQL.
+This is a ToDoList project that implements CRUD (Create, Read, Update, Delete) operations on a list of tasks. The project currently consists of the backend, which is a complete API developed with Node.js, Express, and MySQL.
 
-## Funcionalidades
+## Features
 
-- [x] Criar uma nova tarefa.
-- [x] Listar todas as tarefas existentes.
-- [x] Atualizar uma tarefa existente.
-- [x] Excluir uma tarefa.
+- [x] Create a new task.
+- [x] List all existing tasks.
+- [x] Update an existing task.
+- [x] Delete a task.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - Node.js
 - Express.js
 - MySQL
 
-## Configuração do Banco de Dados
+## Database Configuration
 
-Antes de executar o projeto, é necessário configurar o banco de dados MySQL. Você pode fazer isso seguindo estas etapas:
+Before running the project, you need to configure the MySQL database. You can do this by following these steps:
 
-1. Instale o MySQL em seu sistema, se ainda não estiver instalado.
+1. Install MySQL on your system if it is not already installed.
 
-2. Crie um banco de dados MySQL para o projeto.
+2. Create a MySQL database for the project.
 
-3. Renomeie o arquivo `.env.example` para `.env` na pasta raiz do projeto e configure as variáveis de ambiente necessárias para a conexão com o banco de dados. Você pode usar o arquivo `.env.example` como referência.
+3. Rename the `.env.example` file to `.env` in the project's root folder and configure the necessary environment variables for the database connection. You can use the `.env.example` file as a reference.
 
 ```plaintext
 DB_HOST=localhost
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_DATABASE=nome_do_banco_de_dados
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_DATABASE=database_name
 ```
 
-Edite o arquivo de configuração connection.js na pasta src para usar as variáveis de ambiente configuradas em seu arquivo .env.
+4. Edit the `connection.js` file in the `src` folder to use the environment variables configured in your `.env` file.
+
 ```javascript
-require('dotenv').config(); // Carrega as variáveis de ambiente do arquivo .env
+require('dotenv').config(); // Load environment variables from the .env file
 
 module.exports = {
-host: process.env.DB_HOST,
-user: process.env.DB_USER,
-password: process.env.DB_PASSWORD,
-database: process.env.DB_DATABASE,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 };
 ```
 
-## Instalação e Execução
+## Installation and Execution
 
-Siga estas etapas para executar o projeto:
+Follow these steps to run the project:
 
-1. Clone este repositório:
+1. Clone this repository:
 
-       git clone https://github.com/seu-usuario/seu-projeto-todolist.git
-2. Navegue até a pasta do projeto:
-     
-       cd seu-projeto-todolist
-3. Instale as dependências:
+   ```bash
+   git clone https://github.com/your-username/your-todolist-project.git
+   ```
 
-       npm start
+2. Navigate to the project folder:
 
+   ```bash
+   cd your-todolist-project
+   ```
 
-A API estará acessível em [http://localhost:3333](http://localhost:3333). Certifique-se de que o MySQL esteja em execução e configurado corretamente.
+3. Install the dependencies:
 
-## Endpoints da API
+   ```bash
+   npm install
+   ```
 
-A API possui os seguintes endpoints:
+4. Start the project:
 
-- `GET /tasks`: Lista todas as tarefas.
-- `POST /tasks`: Cria uma nova tarefa.
-- `PUT /tasks/:id`: Atualiza uma tarefa existente.
-- `DELETE /tasks/:id`: Exclui uma tarefa.
+   ```bash
+   npm start
+   ```
 
-Para mais detalhes sobre como usar cada endpoint, consulte a documentação da API.
+   The API will be accessible at [http://localhost:3333](http://localhost:3333). Ensure that MySQL is running and configured correctly.
+
+## Frontend Usage
+
+The frontend of the ToDoList project has been developed using HTML, CSS, and JavaScript. To use the frontend, follow these steps:
+
+1. Open the `index.html` file in a web browser to access the ToDoList interface.
+
+2. Use the provided features to create, list, update, and delete tasks.
+
+## Importing Postman Configurations
+
+To import Postman configurations for testing the API, you can follow these steps:
+
+1. Download and install [Postman](https://www.postman.com/downloads/) if you haven't already.
+
+2. Import the Postman collection by clicking the "Import" button in Postman and selecting the provided Postman collection file.
+
+3. Once imported, you can use the collection to test the API endpoints. Make sure to update the environment variables in Postman to match your API configuration.
+
+## API Endpoints
+
+The API provides the following endpoints:
+
+- `GET /tasks`: Lists all tasks.
+- `POST /tasks`: Creates a new task.
+- `PUT /tasks/:id`: Updates an existing task.
+- `DELETE /tasks/:id`: Deletes a task.
+
+For more details on how to use each endpoint, refer to the API documentation.
+## Author
+
+João Carlos Fernandes Bernardo
+- GitHub: [https://github.com/jcfbernardo](https://github.com/jcfbernardo)

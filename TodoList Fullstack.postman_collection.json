@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "f3d1f047-580e-4ee9-a0c4-28eef079f290",
+		"name": "TodoList Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26041683"
+	},
+	"item": [
+		{
+			"name": "getAll Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "create new task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Subir o o codigo no github\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3333/tasks/3"
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"title\": \"Subir o codigo no github\",\r\n        \"status\": \"em andamento\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/tasks/4"
+			},
+			"response": []
+		}
+	]
+}
